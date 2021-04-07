@@ -17,7 +17,7 @@ public class Student {
     private String lastName;
 
     @Column(name = "age")
-    private int age;
+    private Integer age;
 
     public Long getId() {
         return id;
@@ -43,11 +43,11 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 }

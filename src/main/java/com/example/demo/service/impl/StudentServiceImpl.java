@@ -10,10 +10,8 @@ import java.util.List;
 
 @Service
 public class StudentServiceImpl implements StudentService {
-    StudentServiceImpl() {
-    }
 
-    private StudentRepository studentRepository;
+    private final StudentRepository studentRepository;
 
     public StudentServiceImpl(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
@@ -24,6 +22,7 @@ public class StudentServiceImpl implements StudentService {
         Student student = new Student();
         student.setFirstName(studentData.getFirstName());
         student.setLastName(studentData.getLastName());
+        student.setAge(studentData.getAge());
         studentRepository.save(student);
     }
 
