@@ -5,7 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+
 <div>
+    <h3>Show all user</h3>
+    <form action="/result" method="get">
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <h3>Add user</h3>
     <form action="/" method="post" th:object="${studentData}">
 
         <label for="fn">First name</label>
@@ -20,5 +29,9 @@
         <input type="submit">
     </form>
 </div>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 </body>
 </html>
